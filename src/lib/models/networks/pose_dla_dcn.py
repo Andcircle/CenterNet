@@ -13,7 +13,9 @@ from torch import nn
 import torch.nn.functional as F
 import torch.utils.model_zoo as model_zoo
 
-from .DCNv2.dcn_v2 import DCN
+# from .DCNv2.dcn_v2 import DCN
+from .dcn.modules.deform_conv import ModulatedDeformConvPack as DCN
+from torch.onnx import OperatorExportTypes
 
 BN_MOMENTUM = 0.1
 logger = logging.getLogger(__name__)
